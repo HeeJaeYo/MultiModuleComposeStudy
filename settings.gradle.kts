@@ -1,5 +1,6 @@
 pluginManagement {
     repositories {
+        includeBuild("build-logic")
         google {
             content {
                 includeGroupByRegex("com\\.android.*")
@@ -21,4 +22,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "MultiModuleComposeStudy"
 include(":app")
- 
