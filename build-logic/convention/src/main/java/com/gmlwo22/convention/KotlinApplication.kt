@@ -10,6 +10,9 @@ import org.gradle.kotlin.dsl.provideDelegate
 import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+/**
+ * 다른 컨벤션 프러그인에도 공통으로 들어갈 수 있으니 유틸 함수를 만들자?
+ */
 internal fun Project.configureKotlinAndroid(commonExtension: CommonExtension<*, *, *, *, *, *>) {
     commonExtension.apply {
         compileSdk = 34
