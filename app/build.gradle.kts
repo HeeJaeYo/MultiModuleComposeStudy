@@ -1,17 +1,16 @@
+import com.android.build.gradle.internal.tasks.factory.dependsOn
+import com.android.utils.TraceUtils.simpleId
+
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
+    id("com.gmlwo22.android.application")
 }
 
 android {
     namespace = "com.gmlwo22.multimodulecomposestudy"
-    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.gmlwo22.multimodulecomposestudy"
-        minSdk = 24
-        targetSdk = 34
-        versionCode = 1
+
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -25,13 +24,6 @@ android {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
     }
     buildFeatures {
         compose = true
